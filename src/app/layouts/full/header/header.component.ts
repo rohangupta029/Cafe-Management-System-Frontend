@@ -26,7 +26,7 @@ export class AppHeaderComponent {
     const dialogRef =this.dialog.open(ConfirmationComponent, dialogConfig);
     const sub =dialogRef.componentInstance.onEmitStatusChange.subscribe((response)=>{
       dialogRef.close();
-      localStorage.clear();
+      localStorage.removeItem('token');
       this.router.navigate(['/']);
 
     })

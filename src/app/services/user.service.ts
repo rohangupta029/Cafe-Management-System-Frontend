@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  url =environment.apiUrl;
+  url =environment.apiUrl
   constructor(private httpClient:HttpClient) { }
 
 
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   checkToken(){
-    return this.httpClient.get(this.url+"/user/checkToken");
+    return this.httpClient.get(this.url+"/user/checktoken");
   }
 
   changePassword(data:any){
